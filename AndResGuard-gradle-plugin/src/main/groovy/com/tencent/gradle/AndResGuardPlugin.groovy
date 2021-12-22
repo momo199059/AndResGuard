@@ -47,7 +47,7 @@ class AndResGuardPlugin implements Plugin<Project> {
     if (project.tasks.findByPath(taskName) == null) {
       def task = project.task(taskName, type: AndResGuardTask)
       if (variantName != USE_APK_TASK_NAME) {
-        task.dependsOn "assemble${variantName}"
+        task.dependsOnproject.tasks.findByPath("assemble${variantName}"))
       }
     }
   }
